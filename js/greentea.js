@@ -37,7 +37,8 @@ texture.needsUpdate = true;
 var material = new THREE.MeshPhongMaterial({ map: texture });
 //var material = end_material;
 var obj = new THREE.Mesh(geometry, material);
-obj.position.x -= 20;
+obj.position.x -= 15;
+obj.rotation.y = -Math.PI/6;
 scene.add(obj);
 
 //2. 平らな面はテクスチャをやめる
@@ -48,9 +49,6 @@ var side_material = new THREE.MeshPhongMaterial({ map: texture });
 var end_material = new THREE.MeshPhongMaterial({ color: 0x00ff00 });
 material = new THREE.MeshFaceMaterial([side_material, end_material]);
 
-//
-obj = new THREE.Mesh(geometry, material);
-
 //後ろ radialSegments*2個は end_material
 //それ以外は side_material
 for(var i = 0; i < geometry.faces.length-geometry.parameters.radialSegments*2; i++){
@@ -59,10 +57,13 @@ for(var i = 0; i < geometry.faces.length-geometry.parameters.radialSegments*2; i
 for(var i = geometry.faces.length-geometry.parameters.radialSegments*2; i < geometry.faces.length; i++){
     geometry.faces[i].materialIndex = 1;
 }
-obj.position.x += 20;
+obj = new THREE.Mesh(geometry, material);
+
+obj.position.x += 15;
+obj.rotation.y = -Math.PI/6;
 scene.add(obj);
 
-camera.position.set(0, 40, 40);
+camera.position.set(0, 40, 30);
 
 function render() {
     requestAnimationFrame(render);
