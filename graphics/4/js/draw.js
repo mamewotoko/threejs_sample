@@ -3,9 +3,7 @@ var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHei
 var renderer = new THREE.WebGLRenderer();
 renderer.setSize( window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
-var control = null;
-
-control = new THREE.OrbitControls(camera, renderer.domElement);
+var control = new THREE.OrbitControls(camera, renderer.domElement);
 scene = new THREE.Scene();
 var light = new THREE.AmbientLight(0x888888);
 scene.add(light);

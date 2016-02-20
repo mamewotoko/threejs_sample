@@ -81,4 +81,3 @@ function render() {
     control.update();
     renderer.render(scene, camera);
 }
-
