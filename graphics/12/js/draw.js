@@ -35,7 +35,7 @@ var theta = Math.PI*2/5;
 var pentagon_height = r*(1-Math.cos(2*theta));
 
 var upper_group = new THREE.Object3D();
-upper_group.position.y = -5;
+upper_group.rotation.y = Math.PI/5;
 scene.add(upper_group);
 
 var v0 = new THREE.Vector3(r, 0, 0);
@@ -56,11 +56,17 @@ put_marker(v2, "orange", "6-v2", upper_group);
 put_marker(v3, "orange", "6-v3", upper_group);
 put_marker(v4, "orange", "6-v4", upper_group);
 
-put_line(v0, v1, "purple");
-put_line(v1, v2, "green");
-put_line(v2, v3, "red");
-put_line(v3, v4, "yellow");
-put_line(v4, v0, "pink");
+// put_line(v0, v1, "purple");
+// put_line(v1, v2, "green");
+// put_line(v2, v3, "red");
+// put_line(v3, v4, "yellow");
+// put_line(v4, v0, "pink");
+
+put_line(v0, v1);
+put_line(v1, v2);
+put_line(v2, v3);
+put_line(v3, v4);
+put_line(v4, v0);
 
 put_line(v0, v1, undefined, upper_group);
 put_line(v1, v2, undefined, upper_group);
@@ -95,43 +101,43 @@ var path5center = new THREE.Vector3(r*Math.cos(2*theta), 0, -r*Math.sin(4*theta)
 path2.position.copy(path2center);
 scene.add(path2);
 
-put_marker(path2center, "yellow");
-put_marker(path5center, "yellow");
+// put_marker(path2center, "yellow");
+// put_marker(path5center, "yellow");
 
-path5.position.copy(path5center);
-scene.add(path5);
+// path5.position.copy(path5center);
+// scene.add(path5);
 
-colorlist = ["red", "green", "purple", "pink"];
-for(var i = 1; i < 5; i++){
-    var color = colorlist[i-1];
-    var rot1 = rotation_matrix(i*theta);
-    var path1center2d = multiply(rot1, [path2center.x, path2center.z]);
-    var path0center2d = multiply(rot1, [path5center.x, path5center.z]);
+// colorlist = ["red", "green", "purple", "pink"];
+// for(var i = 1; i < 5; i++){
+//     var color = colorlist[i-1];
+//     var rot1 = rotation_matrix(i*theta);
+//     var path1center2d = multiply(rot1, [path2center.x, path2center.z]);
+//     var path0center2d = multiply(rot1, [path5center.x, path5center.z]);
     
-    var path1center = new THREE.Vector3(path1center2d[0], 0, path1center2d[1]);
-    var path0center = new THREE.Vector3(path0center2d[0], 0, path0center2d[1]);
+//     var path1center = new THREE.Vector3(path1center2d[0], 0, path1center2d[1]);
+//     var path0center = new THREE.Vector3(path0center2d[0], 0, path0center2d[1]);
 
-    put_marker(path1center, color);
-    put_marker(path0center, color);
+//     put_marker(path1center, color);
+//     put_marker(path0center, color);
   
-    var path0 = new THREE.Mesh(rotate_goem, material);
-    var path1 = new THREE.Mesh(rotate_goem, material);
+//     var path0 = new THREE.Mesh(rotate_goem, material);
+//     var path1 = new THREE.Mesh(rotate_goem, material);
 
-    path0.visible = display_circle;
-    path1.visible = display_circle;
+//     path0.visible = display_circle;
+//     path1.visible = display_circle;
 
-    path0.name = color+"-0";
-    path1.name = color+"-1";
+//     path0.name = color+"-0";
+//     path1.name = color+"-1";
 
-    path0.rotation.copy(new THREE.Euler(-Math.PI/2, 0, -i*theta, 'XZY'));
-    path1.rotation.copy(new THREE.Euler(-Math.PI/2, 0, -i*theta, 'XZY'));
+//     path0.rotation.copy(new THREE.Euler(-Math.PI/2, 0, -i*theta, 'XZY'));
+//     path1.rotation.copy(new THREE.Euler(-Math.PI/2, 0, -i*theta, 'XZY'));
     
-    path1.position.copy(path1center);
-    scene.add(path1);    
+//     path1.position.copy(path1center);
+//     scene.add(path1);    
 
-    path0.position.copy(path0center);
-    scene.add(path0);
-}
+//     path0.position.copy(path0center);
+//     scene.add(path0);
+// }
 
 var x2 = -r*(Math.sin(4*theta)*Math.cos(theta/2)-Math.cos(4*theta)*Math.sin(theta/2))/Math.sin(theta/2);
 
@@ -143,12 +149,12 @@ var projb = projl - proja;
 // proja*proja = projb*projb + projh*projh
 var projh = Math.sqrt(proja*proja - projb*projb);
 
-var colors = [ 0xFF0000, 0xdd0000, 0x990000, 0x660000, 0x330000 ];
+//var colors = [ 0xFF0000, 0xdd0000, 0x990000, 0x660000, 0x330000 ];
 for(var i = 0; i < 5; i++){
     var projv2_1_bottom = new THREE.Vector3(projr*Math.cos(i*theta), 0, -projr*Math.sin(i*theta));
     var projv2_1_line = new THREE.Vector3(projr*Math.cos(i*theta), projh, -projr*Math.sin(i*theta));
 
-    put_marker(projv2_1_line, colors[i], "2-v"+i);
+    put_marker(projv2_1_line, undefined, "2-v"+i);
     put_line(pos[i], projv2_1_line);
 
     put_marker(yminus(projv2_1_line), undefined, "5-v"+i, upper_group);
@@ -175,6 +181,7 @@ put_line(rpos1, obj.position);
 obj = scene.getObjectByName("2-v3");
 put_line(rpos1, obj.position);
 
+
 put_line(rpos1, obj.position);
 var lineto = [[3,4],[4,0],[0,1],[1,2]];
 for(var i = 1; i < 5; i++){
@@ -189,6 +196,8 @@ for(var i = 1; i < 5; i++){
     put_line(p, o2.position);
     
 }
+var top_y = rpos1.y + projh;
+upper_group.position.y = top_y;
 
 camera.position.set(0, 10, 10);
 render();
