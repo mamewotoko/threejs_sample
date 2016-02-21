@@ -1,0 +1,34 @@
+<svg width="800" height="800" xmlns="http://www.w3.org/2000/svg">
+<circle cx="400" cy="400" r="100" fill="none" stroke="black" />
+<line x1="0" y1="400" x2="800" y2="400" stroke="black" />
+<line x1="400" y1="0" x2="400" y2="800" stroke="black" />
+<line x1="500" y1="400" x2="350" y2="313" stroke="black" />
+<line x1="350" y1="313" x2="349" y2="486" stroke="black" />
+<line x1="349" y1="486" x2="500" y2="400" stroke="black" />
+<line x1="350" y1="313" x2="600" y2="313" stroke="green" />
+<line x1="349" y1="486" x2="600" y2="486" stroke="green" />
+<line x1="500" y1="400" x2="300" y2="53" stroke="green" />
+<line x1="500" y1="400" x2="300" y2="746" stroke="green" />
+<line x1="500" y1="53" x2="200" y2="573" stroke="green" />
+<line x1="500" y1="746" x2="200" y2="226" stroke="green" />
+<line x1="500" y1="400" x2="500" y2="226" stroke="gray" stroke-dasharray="4,4" />
+<line x1="350" y1="313" x2="500" y2="226" stroke="gray" stroke-dasharray="4,4" />
+<line x1="500" y1="400" x2="500" y2="573" stroke="gray" stroke-dasharray="4,4" />
+<line x1="349" y1="486" x2="500" y2="573" stroke="gray" stroke-dasharray="4,4" />
+<line x1="350" y1="313" x2="200" y2="400" stroke="gray" stroke-dasharray="4,4" />
+<line x1="349" y1="486" x2="200" y2="400" stroke="gray" stroke-dasharray="4,4" />
+<line x1="500" y1="400" x2="650" y2="313" stroke="gray" stroke-dasharray="4,4" />
+<line x1="500" y1="226" x2="650" y2="313" stroke="gray" stroke-dasharray="4,4" />
+<line x1="500" y1="400" x2="649" y2="486" stroke="gray" stroke-dasharray="4,4" />
+<line x1="500" y1="573" x2="649" y2="486" stroke="gray" stroke-dasharray="4,4" />
+<line x1="350" y1="139" x2="350" y2="313" stroke="gray" stroke-dasharray="4,4" />
+<line x1="350" y1="139" x2="500" y2="226" stroke="gray" stroke-dasharray="4,4" />
+<line x1="349" y1="659" x2="349" y2="486" stroke="gray" stroke-dasharray="4,4" />
+<line x1="349" y1="659" x2="500" y2="573" stroke="gray" stroke-dasharray="4,4" />
+<line x1="200" y1="400" x2="200" y2="226" stroke="gray" stroke-dasharray="4,4" />
+<line x1="350" y1="313" x2="200" y2="226" stroke="gray" stroke-dasharray="4,4" />
+<line x1="200" y1="400" x2="200" y2="573" stroke="gray" stroke-dasharray="4,4" />
+<line x1="349" y1="486" x2="200" y2="573" stroke="gray" stroke-dasharray="4,4" />
+<line x1="200" y1="53" x2="600" y2="746" stroke="blue" stroke-dasharray="4,4" />
+<line x1="200" y1="746" x2="600" y2="53" stroke="blue" stroke-dasharray="4,4" />
+</svg>
