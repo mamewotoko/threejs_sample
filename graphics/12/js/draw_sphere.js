@@ -39,9 +39,11 @@ put_line(v4, v5, "pink");
 put_line(v5, v1, "purple");
 pentagon_height = r*(1-Math.cos(2*theta));
 
-var pos = [v1, v2, v3, v4, v5];
-var geometry = new THREE.SphereGeometry(l, 64, 64);
-var material = new THREE.MeshPhongMaterial({color: "white", transparent: true, opacity: 0.5});
+//var pos = [v1, v2, v3, v4, v5];
+var pos = [v1, v2];
+var geometry = new THREE.SphereGeometry(l, 8, 8);
+//var material = new THREE.MeshPhongMaterial({color: "white", transparent: true, opacity: 0.5});
+var material = new THREE.MeshPhongMaterial({color: "white", wireframe:true});
 for(var i = 0; i < pos.length; i++){
     var m = new THREE.Mesh(geometry, material);
     m.position.copy(pos[i]);
@@ -49,7 +51,7 @@ for(var i = 0; i < pos.length; i++){
 }
 
 camera.position.set(0, 10, 10);
-    
+
 render();
 
 function put_marker(v, color){
