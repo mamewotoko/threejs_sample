@@ -13,6 +13,8 @@ def points(i):
 
 print '<svg width="%d" height="%d" xmlns="http://www.w3.org/2000/svg">' % canvas_size
 print '<circle cx="%d" cy="%d" r="%d" fill="none" stroke="black" />' % (o[0], o[1], r)
+print '<circle cx="%d" cy="%d" r="%d" fill="none" stroke="purple" />' % (o[0], o[1], l)
+
 # axis
 print '<line x1="%d" y1="%d" x2="%d" y2="%d" stroke="black" />' % (0, o[1], canvas_size[0], o[1])
 print '<line x1="%d" y1="%d" x2="%d" y2="%d" stroke="black" />' % (o[0], 0, o[0], canvas_size[1])
@@ -77,5 +79,23 @@ print '<line x1="%d" y1="%d" x2="%d" y2="%d" stroke="blue" stroke-dasharray="4,4
 
 print '<line x1="%d" y1="%d" x2="%d" y2="%d" stroke="blue" stroke-dasharray="4,4" />' % (o[0]-2*r, o[1]+2*math.sqrt(3)*r, o[0]+2*r, o[1]-2*math.sqrt(3)*r)
 
+#6
+phi = 2*math.pi/6
+q0 = (l*math.cos(0)+o[0], -l*math.sin(0)+o[1])
+q1 = (l*math.cos(phi)+o[0], -l*math.sin(phi)+o[1])
+q2 = (l*math.cos(2*phi)+o[0], -l*math.sin(2*phi)+o[1])
+q3 = (l*math.cos(3*phi)+o[0], -l*math.sin(3*phi)+o[1])
+q4 = (l*math.cos(4*phi)+o[0], -l*math.sin(4*phi)+o[1])
+q5 = (l*math.cos(5*phi)+o[0], -l*math.sin(5*phi)+o[1])
+
+print '<line x1="%d" y1="%d" x2="%d" y2="%d" stroke="pink" />' % (q0[0], q0[1], q1[0], q1[1])
+print '<line x1="%d" y1="%d" x2="%d" y2="%d" stroke="pink" />' % (q1[0], q1[1], q2[0], q2[1])
+print '<line x1="%d" y1="%d" x2="%d" y2="%d" stroke="pink" />' % (q2[0], q2[1], q3[0], q3[1])
+print '<line x1="%d" y1="%d" x2="%d" y2="%d" stroke="pink" />' % (q3[0], q3[1], q4[0], q4[1])
+print '<line x1="%d" y1="%d" x2="%d" y2="%d" stroke="pink" />' % (q4[0], q4[1], q5[0], q5[1])
+print '<line x1="%d" y1="%d" x2="%d" y2="%d" stroke="pink" />' % (q5[0], q5[1], q0[0], q0[1])
+
+
 #print '<line x1="" y1="" x2="" y2="" stroke="blue"/>'
 print '</svg>'
+

@@ -1,5 +1,6 @@
 <svg width="800" height="800" xmlns="http://www.w3.org/2000/svg">
 <circle cx="400" cy="400" r="100" fill="none" stroke="black" />
+<circle cx="400" cy="400" r="173" fill="none" stroke="purple" />
 <line x1="0" y1="400" x2="800" y2="400" stroke="black" />
 <line x1="400" y1="0" x2="400" y2="800" stroke="black" />
 <line x1="500" y1="400" x2="350" y2="313" stroke="black" />
@@ -31,4 +32,10 @@
 <line x1="349" y1="486" x2="200" y2="573" stroke="gray" stroke-dasharray="4,4" />
 <line x1="200" y1="53" x2="600" y2="746" stroke="blue" stroke-dasharray="4,4" />
 <line x1="200" y1="746" x2="600" y2="53" stroke="blue" stroke-dasharray="4,4" />
+<line x1="573" y1="400" x2="486" y2="250" stroke="pink" />
+<line x1="486" y1="250" x2="313" y2="249" stroke="pink" />
+<line x1="313" y1="249" x2="226" y2="400" stroke="pink" />
+<line x1="226" y1="400" x2="313" y2="550" stroke="pink" />
+<line x1="313" y1="550" x2="486" y2="550" stroke="pink" />
+<line x1="486" y1="550" x2="573" y2="400" stroke="pink" />
 </svg>
