@@ -1,5 +1,5 @@
 var screen_size = [window.innerWidth, window.innerHeight/2];
-var camera = new THREE.PerspectiveCamera(100, screen_size[0]/screen_size[1], 0.1, 1000);
+var camera = new THREE.PerspectiveCamera(30, screen_size[0]/screen_size[1], 0.1, 1000);
 var screen_canvas = document.getElementById("screen");
 var renderer = new THREE.WebGLRenderer({ canvas: screen_canvas });
 renderer.setSize(screen_size[0], screen_size[1]);
@@ -82,20 +82,20 @@ put_marker(v1rot);
 
 put_line(v0, v2rot);
 put_line(v1, v2rot);
-console.log("1", v0.distanceTo(v2rot));
-console.log("2", v1.distanceTo(v2rot));
+// console.log("1", v0.distanceTo(v2rot));
+// console.log("2", v1.distanceTo(v2rot));
 
 put_line(v1, v0rot);
 put_line(v2, v0rot);
 
-console.log("3", v1.distanceTo(v0rot));
-console.log("4", v2.distanceTo(v0rot));
+// console.log("3", v1.distanceTo(v0rot));
+// console.log("4", v2.distanceTo(v0rot));
 
 put_line(v2, v1rot);
 put_line(v0, v1rot);
 
-console.log("5", v2.distanceTo(v1rot));
-console.log("6", v0.distanceTo(v1rot));
+// console.log("5", v2.distanceTo(v1rot));
+// console.log("6", v0.distanceTo(v1rot));
 
 var v0out = new THREE.Vector3(l, projh, 0);
 var v1out = new THREE.Vector3(l*Math.cos(2*Math.PI/3), projh, -l*Math.sin(2*Math.PI/3));
@@ -141,6 +141,15 @@ put_line(v1up, v2rot);
 put_line(v2up, v2out);
 put_line(v2up, v0rot);
 put_line(v2up, v1rot);
+
+console.log("v0", v0.distanceTo(v0out));
+// console.log("v2up", v2up.distanceTo(v2out));
+// console.log("v2up", v2up.distanceTo(v0rot));
+// console.log("v2up", v2up.distanceTo(v1rot));
+
+// console.log("v2up", v2up.distanceTo(v1rot));
+
+
 // var path1center = new THREE.Vector3(v0.x, 0, v1.z);
 // var path2center = new THREE.Vector3(v0.x, 0, v2.z);
 // put_marker(path1center, "green");
