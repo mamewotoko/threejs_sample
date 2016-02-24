@@ -23,4 +23,5 @@ plot values on matrix
 * [Regular Icosahedron(20)](https://rawgit.com/mamewotoko/threejs_sample/master/graphics/20/regular_icosahedron.html)
 
 ----
-Takashi Masuyama <mamewotoko@gmail.com>
+Takashi Masuyama <mamewotoko@gmail.com>  
+http://mamewo.ddo.jp/
