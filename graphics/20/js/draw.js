@@ -97,9 +97,10 @@ put_line(v0, v1rot);
 // console.log("5", v2.distanceTo(v1rot));
 // console.log("6", v0.distanceTo(v1rot));
 
-var v0out = new THREE.Vector3(l, projh, 0);
-var v1out = new THREE.Vector3(l*Math.cos(2*Math.PI/3), projh, -l*Math.sin(2*Math.PI/3));
-var v2out = new THREE.Vector3(l*Math.cos(2*Math.PI*2/3), projh, -l*Math.sin(2*Math.PI*2/3));
+var projh_out = Math.sqrt(l*l - (l-r)*(l-r));
+var v0out = new THREE.Vector3(l, projh_out, 0);
+var v1out = new THREE.Vector3(l*Math.cos(2*Math.PI/3), projh_out, -l*Math.sin(2*Math.PI/3));
+var v2out = new THREE.Vector3(l*Math.cos(2*Math.PI*2/3), projh_out, -l*Math.sin(2*Math.PI*2/3));
 
 put_marker(v0out);
 put_marker(v1out);
@@ -118,57 +119,31 @@ put_line(v1out, v0rot);
 put_line(v2out, v0rot);
 put_line(v2out, v1rot);
 
-var v0up = new THREE.Vector3(v0.x, projh*2, v0.z);
-var v1up = new THREE.Vector3(v1.x, projh*2, v1.z);
-var v2up = new THREE.Vector3(v2.x, projh*2, v2.z);
+var v0t = new THREE.Vector3(-v0.x, projh + projh_out, v0.z);
+var v1t = new THREE.Vector3(-v1.x, projh + projh_out, v1.z);
+var v2t = new THREE.Vector3(-v2.x, projh + projh_out, v2.z);
 
-put_marker(v0up);
-put_marker(v1up);
-put_marker(v2up);
+put_marker(v0t);
+put_marker(v1t);
+put_marker(v2t);
 
-put_line(v0up, v1up);
-put_line(v1up, v2up);
-put_line(v2up, v0up);
+put_line(v0t, v1t);
+put_line(v1t, v2t);
+put_line(v2t, v0t);
 
-put_line(v0up, v0out);
-put_line(v0up, v1rot);
-put_line(v0up, v2rot);
+put_line(v0t, v0rot);
+put_line(v0t, v1out);
+put_line(v0t, v2out);
 
-put_line(v1up, v1out);
-put_line(v1up, v0rot);
-put_line(v1up, v2rot);
+put_line(v1t, v0out);
+put_line(v1t, v2rot);
+put_line(v1t, v1out);
 
-put_line(v2up, v2out);
-put_line(v2up, v0rot);
-put_line(v2up, v1rot);
+put_line(v2t, v0out);
+put_line(v2t, v2out);
+put_line(v2t, v1rot);
 
-console.log("v0", v0.distanceTo(v0out));
-// console.log("v2up", v2up.distanceTo(v2out));
-// console.log("v2up", v2up.distanceTo(v0rot));
-// console.log("v2up", v2up.distanceTo(v1rot));
-
-// console.log("v2up", v2up.distanceTo(v1rot));
-
-
-// var path1center = new THREE.Vector3(v0.x, 0, v1.z);
-// var path2center = new THREE.Vector3(v0.x, 0, v2.z);
-// put_marker(path1center, "green");
-// put_marker(path2center, "green");
-
-// console.log("triangle_height", triangle_height);
-// var geometry = new THREE.CylinderGeometry(triangle_height, triangle_height, 1, 32);
-// var material = new THREE.MeshPhongMaterial({color: "white", transparent: true, opacity: 0.5});
-// var path1 = new THREE.Mesh(geometry, material);
-// path1.position.copy(path1center);
-// path1.rotation.x = Math.PI/2;
-// scene.add(path1);
-
-// var path2 = new THREE.Mesh(geometry, material);
-// path2.position.copy(path2center);
-// path2.rotation.x = Math.PI/2;
-// scene.add(path2);
-
-camera.position.set(0, 10, 10);
+camera.position.set(0, 40, 40);
 render();
 
 function put_marker(v, color, name, parent){
@@ -192,6 +167,7 @@ function put_marker(v, color, name, parent){
 }
 
 function put_line(v1, v2, color, parent){
+    //console.log("dist", color, v1.distanceTo(v2))
     if(!color){
 	color = 0xff00ff;
     }
