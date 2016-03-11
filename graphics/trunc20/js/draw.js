@@ -146,11 +146,39 @@ var p2_pentagon_right = draw_pentagon(p2_right[3], p2_right[2], pright_bottom[4]
 
 var p2_pentagon_left = draw_pentagon(p2_bottom_left[3], p2_bottom_left[2], pleft[4]);
 
-var p2_bottom_up = draw_pentagon(p2_left_up[3], p2_left_up[2], pup[3]);
+var p2_pentagon_up = draw_pentagon(p2_left_up[3], p2_left_up[2], pup[3]);
 
-// put_marker(p2_bottom_left[4], "red");
-// put_marker(p2_bottom_left[3], "green");
-// put_marker(pleft[4], "blue");
+var p3_up_left = draw_hexagon(p2_left_up[4], p2_left_up[3], p2_pentagon_up[4]);
+var p3_up_right = draw_hexagon(p2_pentagon_up[4], p2_pentagon_up[3], p2_right_up[4]);
+
+var p3_right_up = draw_hexagon(p2_right[4], p2_right[3], p2_pentagon_right[4]);
+var p3_right_down = draw_hexagon(p2_pentagon_right[4], p2_pentagon_right[3], p2_bottom_right[4]);
+
+var p3_left_down = draw_hexagon(p2_bottom_left[4], p2_bottom_left[3], p2_pentagon_left[4]);
+var p3_left_up = draw_hexagon(p2_pentagon_left[4], p2_pentagon_left[3], p2_left[4]);
+
+var p3_pentagon_bottom = draw_pentagon(p2_bottom_right[4], p2_bottom_right[3], p2_bottom_left[4]);
+var p3_pentagon_left = draw_pentagon(p2_left[4], p2_left[3], p2_left_up[4]);
+var p3_pentagon_right = draw_pentagon(p2_right_up[4], p2_right_up[3], p2_right[4]);
+
+var p4_bottom = draw_hexagon(p3_pentagon_bottom[3], p3_pentagon_bottom[4], p3_right_down[4]);
+var p4_left = draw_hexagon(p3_pentagon_left[4], p3_pentagon_left[3], p3_up_left[4]);
+var p4_right = draw_hexagon(p3_pentagon_right[3], p3_pentagon_right[4], p3_up_right[4]);
+
+//top hexagon
+var p5_1 = p4_right[3];
+var p5_2 = p4_right[4];
+var p5_3 = p4_bottom[3];
+
+put_line(p5_2, p5_3);
+
+draw_hexagon(p5_1, p5_2, p5_3);
+
+// put_marker(p5_1, "red");
+// put_marker(p5_2, "green");
+// put_marker(p5_3, "blue");
+// put_marker(p3_pentagon_left[3], "green");
+// put_marker(p3_up_left[4], "blue");
 
 camera.position.set(0, 80, 80);
 render();
