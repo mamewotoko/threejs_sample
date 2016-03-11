@@ -1,0 +1,35 @@
+<svg width="800" height="800" xmlns="http://www.w3.org/2000/svg">
+<circle cx="400" cy="400" r="100" fill="none" stroke="black" />
+<line x1="0" y1="400" x2="800" y2="400" stroke="black" />
+<line x1="400" y1="0" x2="400" y2="800" stroke="black" />
+<line x1="500" y1="400" x2="450" y2="313" stroke="black" />
+<line x1="450" y1="313" x2="350" y2="313" stroke="black" />
+<line x1="350" y1="313" x2="300" y2="400" stroke="black" />
+<line x1="300" y1="400" x2="349" y2="486" stroke="black" />
+<line x1="349" y1="486" x2="449" y2="486" stroke="black" />
+<line x1="449" y1="486" x2="500" y2="400" stroke="black" />
+<line x1="500" y1="400" x2="500" y2="0" stroke="green" stroke-dasharray="4,4" />
+<line x1="300" y1="400" x2="300" y2="0" stroke="green" stroke-dasharray="4,4" />
+<line x1="450" y1="313" x2="450" y2="0" stroke="green" stroke-dasharray="4,4" />
+<line x1="350" y1="313" x2="350" y2="0" stroke="green" stroke-dasharray="4,4" />
+<line x1="450" y1="313" x2="500" y2="226" stroke="green" />
+<line x1="450" y1="139" x2="500" y2="226" stroke="green" />
+<line x1="450" y1="139" x2="350" y2="139" stroke="green" />
+<line x1="300" y1="226" x2="350" y2="139" stroke="green" />
+<line x1="300" y1="226" x2="350" y2="313" stroke="green" />
+<line x1="500" y1="400" x2="597" y2="379" stroke="pink" />
+<text x="597" y="379">Math.PI/15</text>
+<circle cx="500" cy="400" r="100" stroke-dasharray="4,4" fill="none" stroke="gray" />
+<circle cx="450" cy="313" r="100" stroke-dasharray="4,4" fill="none" stroke="gray" />
+<line x1="400" y1="400" x2="608" y2="279" stroke="pink" stroke-dasharray="4,4" />
+<line x1="597" y1="379" x2="608" y2="279" stroke="pink" />
+<line x1="516" y1="238" x2="608" y2="279" stroke="pink" />
+<line x1="389" y1="499" x2="597" y2="379" stroke="pink" stroke-dasharray="4,4" />
+<line x1="308" y1="358" x2="516" y2="238" stroke="pink" stroke-dasharray="4,4" />
+<line x1="450" y1="313" x2="516" y2="238" stroke="pink" />
+<line x1="449" y1="486" x2="499" y2="572" stroke="red" />
+<line x1="599" y1="572" x2="499" y2="572" stroke="red" />
+<line x1="600" y1="400" x2="650" y2="486" stroke="red" />
+<line x1="599" y1="572" x2="650" y2="486" stroke="red" />
+<line x1="600" y1="400" x2="450" y2="313" stroke="red" stroke-dasharray="4,4"/>
+</svg>
