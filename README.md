@@ -21,7 +21,7 @@ plot values on matrix
     * [Regular octahedron(8)](https://rawgit.com/mamewotoko/threejs_sample/master/graphics/8/regular_octahedron.html)
     * [Regular dodecahedron(12)](https://rawgit.com/mamewotoko/threejs_sample/master/graphics/12/regular_dodecahedron.html)
     * [Regular Icosahedron(20)](https://rawgit.com/mamewotoko/threejs_sample/master/graphics/20/regular_icosahedron.html)
-
+    * [Truncated Icosahedron](https://rawgit.com/mamewotoko/threejs_sample/master/graphics/trunc20/truncated_icosahedron.html)
 ----
 Takashi Masuyama <mamewotoko@gmail.com>  
 http://mamewo.ddo.jp/
