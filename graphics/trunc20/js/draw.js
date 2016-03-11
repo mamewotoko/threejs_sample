@@ -1,4 +1,4 @@
-var screen_size = [window.innerWidth, window.innerHeight*3/4];
+var screen_size = [window.innerWidth, window.innerHeight/3];
 var camera = new THREE.PerspectiveCamera(30, screen_size[0]/screen_size[1], 0.1, 1000);
 var screen_canvas = document.getElementById("screen");
 screen_canvas.width = screen_size[0]
@@ -181,7 +181,8 @@ draw_hexagon(p5_1, p5_2, p5_3);
 // put_marker(p3_pentagon_left[3], "green");
 // put_marker(p3_up_left[4], "blue");
 
-camera.position.set(0, 150, 150);
+camera.position.set(0, 100, 100);
+control.target.set(0, 2*l, 0);
 render();
 
 function draw_pentagon(p1, p2, p3){
