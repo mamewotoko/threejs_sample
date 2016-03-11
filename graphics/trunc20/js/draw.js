@@ -46,60 +46,61 @@ put_line(v3, v4);
 put_line(v4, v5);
 put_line(v5, v0);
 
-var upoffset = new THREE.Vector3(0, 0, -h6);
-var up0 = v0.clone().add(upoffset);
-var up1 = v1.clone().add(upoffset);
-var up2 = v2.clone().add(upoffset);
-var up3 = v3.clone().add(upoffset);
-var up4 = v4.clone().add(upoffset);
-var up5 = v5.clone().add(upoffset);
+//copy to up
+// var upoffset = new THREE.Vector3(0, 0, -h6);
+// var up0 = v0.clone().add(upoffset);
+// var up1 = v1.clone().add(upoffset);
+// var up2 = v2.clone().add(upoffset);
+// var up3 = v3.clone().add(upoffset);
+// var up4 = v4.clone().add(upoffset);
+// var up5 = v5.clone().add(upoffset);
 
-put_line(up0, up1, "yellow");
-put_line(up1, up2, "yellow");
-put_line(up2, up3, "yellow");
-put_line(up3, up4, "yellow");
-put_line(up4, up5, "yellow");
-put_line(up5, up0, "yellow");
+// put_line(up0, up1, "yellow");
+// put_line(up1, up2, "yellow");
+// put_line(up2, up3, "yellow");
+// put_line(up3, up4, "yellow");
+// put_line(up4, up5, "yellow");
+// put_line(up5, up0, "yellow");
 
-var right1 = v0.clone().add(new THREE.Vector3(l, 0, 0));
-var right0 = right1.clone().add(new THREE.Vector3(l*Math.cos(-Math.PI/3), 0, -l*Math.sin(-Math.PI/3)));
-var right5 = right0.clone().add(new THREE.Vector3(l*Math.cos(-2*Math.PI/3), 0, -l*Math.sin(-2*Math.PI/3)));
-var right4 = v5.clone().add(new THREE.Vector3(l*Math.cos(-Math.PI/3), 0, -l*Math.sin(-Math.PI/3)));
-put_line(right1, right0, "yellow");
-put_line(right0, right5, "yellow");
-put_line(right4, right5, "yellow");
-put_line(v5, right4, "yellow");
+// var right1 = v0.clone().add(new THREE.Vector3(l, 0, 0));
+// var right0 = right1.clone().add(new THREE.Vector3(l*Math.cos(-Math.PI/3), 0, -l*Math.sin(-Math.PI/3)));
+// var right5 = right0.clone().add(new THREE.Vector3(l*Math.cos(-2*Math.PI/3), 0, -l*Math.sin(-2*Math.PI/3)));
+// var right4 = v5.clone().add(new THREE.Vector3(l*Math.cos(-Math.PI/3), 0, -l*Math.sin(-Math.PI/3)));
+// put_line(right1, right0, "yellow");
+// put_line(right0, right5, "yellow");
+// put_line(right4, right5, "yellow");
+// put_line(v5, right4, "yellow");
 
-var left2 = v3.clone().add(new THREE.Vector3(-l, 0, 0));
-var left3 = left2.clone().add(new THREE.Vector3(l*Math.cos(-2*Math.PI/3), 0, -l*Math.sin(-2*Math.PI/3)));
-var left4 = left3.clone().add(new THREE.Vector3(l*Math.cos(-Math.PI/3), 0, -l*Math.sin(-Math.PI/3)));
-var left5 = left4.clone().add(new THREE.Vector3(l, 0, 0));
+// var left2 = v3.clone().add(new THREE.Vector3(-l, 0, 0));
+// var left3 = left2.clone().add(new THREE.Vector3(l*Math.cos(-2*Math.PI/3), 0, -l*Math.sin(-2*Math.PI/3)));
+// var left4 = left3.clone().add(new THREE.Vector3(l*Math.cos(-Math.PI/3), 0, -l*Math.sin(-Math.PI/3)));
+// var left5 = left4.clone().add(new THREE.Vector3(l, 0, 0));
 
-put_line(v3, left2, "yellow");
-put_line(left2, left3, "yellow");
-put_line(left3, left4, "yellow");
-put_line(left4, left5, "yellow");
-put_line(left5, v4, "yellow");
+// put_line(v3, left2, "yellow");
+// put_line(left2, left3, "yellow");
+// put_line(left3, left4, "yellow");
+// put_line(left4, left5, "yellow");
+// put_line(left5, v4, "yellow");
 
-var bottom4 = v5.clone().add(new THREE.Vector3(l*Math.cos(-2*Math.PI/5), 0, -l*Math.sin(-2*Math.PI/5)));
-var bottom2 = v4.clone().add(new THREE.Vector3(l*Math.cos(-3*Math.PI/5), 0, -l*Math.sin(-3*Math.PI/5)));
-var bottom_offsetz = l*Math.cos(3*Math.PI/10);
-var bottom3 = new THREE.Vector3(0, 0, bottom2.z+bottom_offsetz);
+// var bottom4 = v5.clone().add(new THREE.Vector3(l*Math.cos(-2*Math.PI/5), 0, -l*Math.sin(-2*Math.PI/5)));
+// var bottom2 = v4.clone().add(new THREE.Vector3(l*Math.cos(-3*Math.PI/5), 0, -l*Math.sin(-3*Math.PI/5)));
+// var bottom_offsetz = l*Math.cos(3*Math.PI/10);
+// var bottom3 = new THREE.Vector3(0, 0, bottom2.z+bottom_offsetz);
 
-put_line(v4, bottom2, "green");
-put_line(v5, bottom4, "green");
-put_line(bottom2, bottom3, "green");
-put_line(bottom3, bottom4, "green");
+// put_line(v4, bottom2, "green");
+// put_line(v5, bottom4, "green");
+// put_line(bottom2, bottom3, "green");
+// put_line(bottom3, bottom4, "green");
 
 //pink
-var leftup1 = v0.clone().add(new THREE.Vector3(l*Math.cos(Math.PI/15), 0, -l*Math.sin(Math.PI/15)));
-var leftup2 = leftup1.clone().add(new THREE.Vector3(l*Math.cos(Math.PI/15+Math.PI*2/5), 0, -l*Math.sin(Math.PI/15+Math.PI*2/5)));
-var leftup3 = v1.clone().add(new THREE.Vector3(l*Math.cos(Math.PI*3/5-Math.PI/3), 0, -l*Math.sin(Math.PI*3/5-Math.PI/3)));
+// var leftup1 = v0.clone().add(new THREE.Vector3(l*Math.cos(Math.PI/15), 0, -l*Math.sin(Math.PI/15)));
+// var leftup2 = leftup1.clone().add(new THREE.Vector3(l*Math.cos(Math.PI/15+Math.PI*2/5), 0, -l*Math.sin(Math.PI/15+Math.PI*2/5)));
+// var leftup3 = v1.clone().add(new THREE.Vector3(l*Math.cos(Math.PI*3/5-Math.PI/3), 0, -l*Math.sin(Math.PI*3/5-Math.PI/3)));
 
-put_line(v0, leftup1, "pink");
-put_line(leftup1, leftup2, "pink");
-put_line(leftup2, leftup3, "pink");
-put_line(v1, leftup3, "pink");
+// put_line(v0, leftup1, "pink");
+// put_line(leftup1, leftup2, "pink");
+// put_line(leftup2, leftup3, "pink");
+// put_line(v1, leftup3, "pink");
 
 //projected leftup3 moves
 //y = Math.tan(Math.PI/6)*x + l*(Math.sin(Math.PI/3)+Math.sin(Math.PI*4/15) -Math.tan(Math.PI/6)*Math.cos(Math.PI/3)-Math.tan(Math.PI/6)*Math.cos(Math.PI*4/15))
@@ -180,7 +181,7 @@ draw_hexagon(p5_1, p5_2, p5_3);
 // put_marker(p3_pentagon_left[3], "green");
 // put_marker(p3_up_left[4], "blue");
 
-camera.position.set(0, 80, 80);
+camera.position.set(0, 150, 150);
 render();
 
 function draw_pentagon(p1, p2, p3){
