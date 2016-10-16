@@ -68,7 +68,7 @@ obj.rotation.y = -Math.PI/6;
 scene.add(obj);
 
 scene.add(camera);
-camera.position.set(20*2, 40*2, 30*2);
+camera.position.set(20*2, 40*2, 80*2);
 
 var effect = new THREE.StereoEffect(renderer);
 effect.setSize(window.innerWidth, window.innerHeight);

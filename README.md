@@ -23,6 +23,15 @@ plot values on matrix
     * [Regular Icosahedron(20)](https://rawgit.com/mamewotoko/threejs_sample/master/graphics/20/regular_icosahedron.html)
     * [Truncated Icosahedron](https://rawgit.com/mamewotoko/threejs_sample/master/graphics/trunc20/truncated_icosahedron.html)
 
+5. [cardboard sample (HMD)](https://rawgit.com/mamewotoko/threejs_sample/master/greentea_hmd.html)
+   * Note: select PC version with android web browser
+
+TODO
+----
+* use controller for HMD
+* optimize initial position of hmd version
+* display full screen (hmd)
+
 ----
 Takashi Masuyama <mamewotoko@gmail.com>  
 http://mamewo.ddo.jp/
