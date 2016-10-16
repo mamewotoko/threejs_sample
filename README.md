@@ -28,9 +28,10 @@ plot values on matrix
 
 TODO
 ----
-* use controller for HMD
+* display  full screen (hmd)
+* add mouse controll
+  * go forward, back, left, right, up, down
 * optimize initial position of hmd version
-* display full screen (hmd)
 
 ----
 Takashi Masuyama <mamewotoko@gmail.com>  
