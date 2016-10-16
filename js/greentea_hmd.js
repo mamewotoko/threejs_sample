@@ -9,7 +9,8 @@ var renderer = new THREE.WebGLRenderer();
 renderer.setSize( window.innerWidth, window.innerHeight*0.7);
 document.body.appendChild(renderer.domElement);
 var control = new THREE.OrbitControls(camera, renderer.domElement);
-
+var control_3d = new THREE.DeviceOrientationControls(camera, true);
+control_3d.connect();
 var axes = buildAxes(10000);
 scene.add(axes);
 
@@ -48,6 +49,7 @@ scene.add(obj);
 //2. 平らな面はテクスチャをやめる
 geometry = new THREE.CylinderGeometry(10, 10, 32, 128);
 var texture = new THREE.Texture(canvas);
+
 texture.needsUpdate = true;
 var side_material = new THREE.MeshPhongMaterial({ map: texture });
 var end_material = new THREE.MeshPhongMaterial({ color: TEXTURE_BACKGROUND_COLOR });
@@ -76,6 +78,8 @@ effect.setSize(window.innerWidth, window.innerHeight);
 function render() {
     requestAnimationFrame(render);
     control.update();
+    control_3d.connect();
+
     //renderer.render(scene, camera);
     effect.render(scene, camera);
 }
