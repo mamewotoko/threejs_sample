@@ -78,7 +78,7 @@ effect.setSize(window.innerWidth, window.innerHeight);
 function render() {
     requestAnimationFrame(render);
     control.update();
-    control_3d.connect();
+    control_3d.update();
 
     //renderer.render(scene, camera);
     effect.render(scene, camera);
