@@ -85,5 +85,7 @@ function render() {
     //renderer.render(scene, camera);
     effect.render(scene, camera);
 }
-window.scrollTo(0,1);
+window.onload = function(){
+    window.scrollTo(0,1);
+}
 render();
