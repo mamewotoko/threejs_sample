@@ -21,8 +21,8 @@ light.position.set(10, 10, 0);
 scene.add(light);
 
 var canvas = document.createElement("canvas");
-canvas.width = 64;
-canvas.height = 32;
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight+1;
 canvas.addEventListener("click", function(){
     canvas.requestFullscreen();
 }, false);
