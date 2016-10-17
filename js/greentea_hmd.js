@@ -23,9 +23,10 @@ scene.add(light);
 var canvas = document.createElement("canvas");
 canvas.width = 64;
 canvas.height = 32;
-//canvas.width = 16;
-//canvas.height = 16;
-console.log("canvas", canvas);
+canvas.addEventListener("click", function(){
+    canvas.requestFullscreen();
+}, false);
+
 var xc = canvas.getContext("2d");
 xc.fillStyle=TEXTURE_BACKGROUND_COLOR;
 xc.fillRect(0, 0, canvas.width, canvas.height);
@@ -49,6 +50,7 @@ scene.add(obj);
 //2. 平らな面はテクスチャをやめる
 geometry = new THREE.CylinderGeometry(10, 10, 32, 128);
 var texture = new THREE.Texture(canvas);
+
 
 texture.needsUpdate = true;
 var side_material = new THREE.MeshPhongMaterial({ map: texture });
@@ -83,5 +85,5 @@ function render() {
     //renderer.render(scene, camera);
     effect.render(scene, camera);
 }
-
+window.scrollTo(0,1);
 render();
