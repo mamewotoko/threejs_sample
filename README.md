@@ -36,6 +36,7 @@ TODO
   * go forward, back, left, right, up, down
 * display  full screen easily (hmd)
 * optimize initial position of hmd version
+* smoothing?
 
 ----
 Takashi Masuyama <mamewotoko@gmail.com>  
