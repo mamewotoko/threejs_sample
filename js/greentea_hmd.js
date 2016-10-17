@@ -2,6 +2,8 @@
 var TEXT_COLOR = "#FFFFFF";
 var TEXTURE_BACKGROUND_COLOR = "#00FF00";
 
+var space_height = document.getElementById('full_switch').clientHeight;
+
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
@@ -22,7 +24,7 @@ scene.add(light);
 
 var canvas = document.createElement("canvas");
 canvas.width = window.innerWidth;
-canvas.height = window.innerHeight+1;
+canvas.height = window.innerHeight+space_height;
 canvas.addEventListener("click", function(){
     canvas.requestFullscreen();
 }, false);
@@ -50,7 +52,6 @@ scene.add(obj);
 //2. 平らな面はテクスチャをやめる
 geometry = new THREE.CylinderGeometry(10, 10, 32, 128);
 var texture = new THREE.Texture(canvas);
-
 
 texture.needsUpdate = true;
 var side_material = new THREE.MeshPhongMaterial({ map: texture });
@@ -86,6 +87,8 @@ function render() {
     effect.render(scene, camera);
 }
 window.onload = function(){
-    window.scrollTo(0,1);
+    setInterval(function(){
+        //console.log("rect top: " + rect.top);
+        window.scrollTo(0, space_height);}, 500);
 }
 render();

@@ -3,11 +3,12 @@
    <meta charset="utf-8" />
 <!-- Location: http://www002.upp.so-net.ne.jp/mamewo/indeivex.html # -->
    <meta name="Author" content="Takashi Masuyama" />
-<!--   <meta name="viewport" content="width=device-width" /> -->
+   <meta name="viewport" content="width=device-width" />
+   <!--
    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1" />
    <meta name="apple-mobile-web-app-capable" content="yes" />
    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-   
+-->   
    <title>お茶の缶(HMD)</title>
    <link rel="stylesheet" href="./css/style.css" />
    <script src="js/lib/three.min.js"></script>
@@ -15,14 +16,9 @@
    <script src="js/lib/StereoEffect.js"></script>
    <script src="js/lib/DeviceOrientationControls.js"></script>
    <script src="js/lib/axis.js"></script>
-   <script>
-     function scroll_to_fullscreen(){
-     var height = document.getElementById("full_switch").clientHeight;
-     window.scrollTo(0, height);
-     }
-   </script>
 </head>
-  <body>
-<!--    <div id="full_switch" style="background-color: gray; color: white" onclick="scroll_to_fullscreen();">full screen</div> -->
+<!--  <body onload="setTimeout(function(){window.scrollTo(0, 10);}, 2000);"> -->
+<body>
+<div id="full_switch" style="background-color: red;">xxxxx</div>
 <script src="js/greentea_hmd.js"></script>
 </body></html>
