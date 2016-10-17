@@ -25,9 +25,6 @@ scene.add(light);
 var canvas = document.createElement("canvas");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight+space_height;
-canvas.addEventListener("click", function(){
-    canvas.requestFullscreen();
-}, false);
 
 var xc = canvas.getContext("2d");
 xc.fillStyle=TEXTURE_BACKGROUND_COLOR;

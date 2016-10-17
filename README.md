@@ -24,13 +24,17 @@ plot values on matrix
     * [Truncated Icosahedron](https://rawgit.com/mamewotoko/threejs_sample/master/graphics/trunc20/truncated_icosahedron.html)
 
 5. [cardboard sample (HMD)](https://rawgit.com/mamewotoko/threejs_sample/master/greentea_hmd.html)
-   * Note: select PC version with android web browser
+  * Note: fullscreen
+     * hide home touch button for browser to hide back/home/switch app button of android
+     * select fullscreen config of browser to hide status bar
+     * uncheck tool bar config of browser to hide tool bar
+     * scroll down to bottom of page to hide url bar
 
 TODO
 ----
-* display  full screen (hmd)
-* add mouse controll
+* add mouse control
   * go forward, back, left, right, up, down
+* display  full screen easily (hmd)
 * optimize initial position of hmd version
 
 ----
