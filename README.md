@@ -29,6 +29,9 @@ plot values on matrix
      * select fullscreen config of browser to hide status bar
      * uncheck tool bar config of browser to hide tool bar
      * scroll down to bottom of page to hide url bar
+6. Gamepad API(https://rawgit.com/mamewotoko/threejs_sample/master/control/greentea.html)
+  * PS3 controller, index 0
+  
 
 TODO
 ----
