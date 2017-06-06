@@ -1,0 +1,8 @@
+{"name": "greentea",
+ "reason": {},
+ "bs-dependencies": [
+    "bs-webapi"
+ ],
+ "bs-dev-dependencies": [],
+ "sources": ["src"]
+}
