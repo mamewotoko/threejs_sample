@@ -17,7 +17,7 @@ Contents
 
 3. GUI that changes color / paramters [various_tea/tea.html](various_tea/tea.html)
 
-4. regular polyhedrons
+4. [regular polyhedrons](https://en.wikipedia.org/wiki/Regular_polyhedron)
     * [Regular tetrahedron(4)](https://rawgit.com/mamewotoko/threejs_sample/master/graphics/4/regular_tetrahedron.html)
     * [Regular hexahedron(6)](https://rawgit.com/mamewotoko/threejs_sample/master/graphics/6/box.html)
     * [Regular octahedron(8)](https://rawgit.com/mamewotoko/threejs_sample/master/graphics/8/regular_octahedron.html)
@@ -34,12 +34,11 @@ Contents
 6. Gamepad API(https://rawgit.com/mamewotoko/threejs_sample/master/control/greentea.html)
   * PS3 controller, index 0
   
-
 TODO
 ----
 * add mouse control
   * go forward, back, left, right, up, down
-* display  full screen easily (hmd)
+* display full screen easily (hmd)
 * optimize initial position of hmd version
 * smoothing?
 
