@@ -7,11 +7,13 @@ browse html using web browser except IE
 
 Contents
 --------
-1. texture on cylinder [greentea.html](greentea.html)
-use MeshFaceMaterial for CylinderGeometry (which has many segments)
+1. texture on cylinder [greentea.html](greentea.html) 
+  * browse on [rawgit](https://rawgit.com/mamewotoko/threejs_sample/master/greentea.html)
+  * using MeshFaceMaterial for CylinderGeometry (which has many segments)
 
 2. matrix plot [matrix_plot/matrix_plot.html](matrix_plot/matrix_plot.html)
-plot values on matrix
+  * browse on [rawgit](https://rawgit.com/mamewotoko/threejs_sample/master/matrix_plot/matrix_plot.html)
+  * plot values on matrix
 
 3. GUI that changes color / paramters [various_tea/tea.html](various_tea/tea.html)
 
@@ -40,6 +42,11 @@ TODO
 * display  full screen easily (hmd)
 * optimize initial position of hmd version
 * smoothing?
+
+Reference
+----------
+* [RawGit](https://rawgit.com/) 
+  * _RawGit serves raw files directly from GitHub with proper Content-Type headers._
 
 ----
 Takashi Masuyama <mamewotoko@gmail.com>  
