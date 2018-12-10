@@ -5,6 +5,8 @@ How to start
 ------------
 browse html using web browser except IE
 
+![demo](img/demo.png)
+
 Contents
 --------
 1. texture on cylinder [greentea.html](greentea.html) 
