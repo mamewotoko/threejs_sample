@@ -1,4 +1,4 @@
-* [three.js](https://threejs.org/) sample
+[three.js](https://threejs.org/) sample
 ==========================================
 
 How to start
