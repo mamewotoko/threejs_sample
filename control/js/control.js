@@ -230,7 +230,7 @@ function render() {
     // if(buttonPressed(gp.buttons[DOWN])){
     //     camera.position.set(p.x, p.y-unit_speed, p.z)
     // }
-
+    console.log('id: ' + gp.id);
     if(gp.id.startsWith(ps3)){
         console.log('handle ps3');
         ps3.handle(gp);
