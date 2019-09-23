@@ -84,6 +84,7 @@ var UP = 12;
 var DOWN = 13;
 var LEFT = 14;
 var RIGHT = 15;
+//id: 
 
 //sega
 //up: axis5 -1
@@ -98,6 +99,97 @@ var RIGHT = 15;
 //c: b5
 //mode: b8
 //start: b9
+//id: ca3-24
+var unit_speed = 2;
+
+var ps2 = {
+    PREFIX: '54c-268-',
+    handle: function(gp){
+        var backward = gp.buttons[6].pressed;
+        var forward = gp.buttons[7].pressed;
+        var p = camera.position;
+        if(buttonPressed(gp.buttons[LEFT])){
+            camera.position.set(p.x-unit_speed, p.y, p.z)
+        }
+        if(buttonPressed(gp.buttons[RIGHT])){
+            camera.position.set(p.x+unit_speed, p.y, p.z)
+        }
+        if(buttonPressed(gp.buttons[L2])){
+            camera.position.set(p.x, p.y, p.z+unit_speed)
+        }
+        if(buttonPressed(gp.buttons[R2])){
+            camera.position.set(p.x, p.y, p.z-unit_speed)
+        }
+        if(buttonPressed(gp.buttons[UP])){
+            camera.position.set(p.x, p.y+unit_speed, p.z)
+        }
+        if(buttonPressed(gp.buttons[DOWN])){
+            camera.position.set(p.x, p.y-unit_speed, p.z)
+        }
+    }
+};
+
+var sega = {
+    PREFIX: 'ca3-24-',
+    UP_DOWN_AXES: 5,
+    LEFT_RIGHT_AXES: 4,
+    X: 3,
+    Y: 0,
+    Z: 4,
+    A: 2,
+    B: 1,
+    C: 5,
+    MODE: 8,
+    START: 9,
+
+    up_pressed: function(gp){
+        return Math.abs(gp.axis[UP_DOWN_AXES] - (-1)) < 0.001;
+    },
+    down_pressed: function(gp){
+        return Math.abs(gp.axis[UP_DOWN_AXES] - (1)) < 0.001;
+    },
+    left_pressed: function(gp){
+        return Math.abs(gp.axis[LEFT_RIGHT_AXES] - (-1)) < 0.001;
+    },
+    right_pressed: function(gp){
+        return Math.abs(gp.axis[LEFT_RIGHT_AXES] - (1)) < 0.001;
+    },
+    x_pressed: function(gp){
+        return gp.axis[X] == 1;
+    },
+    y_pressed: function(gp){
+        return gp.axis[Y] == 1;
+    },
+    z_pressed: function(gp){
+        return gp.axis[Z] == 1;
+    },
+    a_pressed: function(gp){
+        return gp.axis[A] == 1;
+    },
+    b_pressed: function(gp){
+        return gp.axis[B] == 1;
+    },
+    c_pressed: function(gp){
+        return gp.axis[C] == 1;
+    },
+
+    //default handler
+    handle: function(gp){
+        if(this.left_pressed(gp)){
+            camera.position.set(p.x-unit_speed, p.y, p.z)
+        }
+        if(this.right_pressed(gp)){
+            camera.position.set(p.x+unit_speed, p.y, p.z)
+        }
+        if(this.up_pressed(gp)){
+            camera.position.set(p.x, p.y+unit_speed, p.z)
+        }
+        if(this.down_pressed(gp)){
+            camera.position.set(p.x, p.y-unit_speed, p.z)
+        }
+    }
+};
+
 
 function render() {
     var gamepads = navigator.getGamepads ? navigator.getGamepads() : (navigator.webkitGetGamepads ? navigator.webkitGetGamepads : []);
@@ -116,29 +208,35 @@ function render() {
         requestAnimationFrame(render);
         return;
     }
-    var backward = gp.buttons[6].pressed;
-    var forward = gp.buttons[7].pressed;
-    var unit_speed = 2;
-    var p = camera.position;
-    if(buttonPressed(gp.buttons[LEFT])){
-        camera.position.set(p.x-unit_speed, p.y, p.z)
+    // var backward = gp.buttons[6].pressed;
+    // var forward = gp.buttons[7].pressed;
+    // var unit_speed = 2;
+    // var p = camera.position;
+    // if(buttonPressed(gp.buttons[LEFT])){
+    //     camera.position.set(p.x-unit_speed, p.y, p.z)
+    // }
+    // if(buttonPressed(gp.buttons[RIGHT])){
+    //     camera.position.set(p.x+unit_speed, p.y, p.z)
+    // }
+    // if(buttonPressed(gp.buttons[L2])){
+    //     camera.position.set(p.x, p.y, p.z+unit_speed)
+    // }
+    // if(buttonPressed(gp.buttons[R2])){
+    //     camera.position.set(p.x, p.y, p.z-unit_speed)
+    // }
+    // if(buttonPressed(gp.buttons[UP])){
+    //     camera.position.set(p.x, p.y+unit_speed, p.z)
+    // }
+    // if(buttonPressed(gp.buttons[DOWN])){
+    //     camera.position.set(p.x, p.y-unit_speed, p.z)
+    // }
+
+    if(gp.id.startsWith(ps3)){
+        ps3.handle(gp);
     }
-    if(buttonPressed(gp.buttons[RIGHT])){
-        camera.position.set(p.x+unit_speed, p.y, p.z)
+    else if(gp.id.startsWith(sega)){
+        sega.handle(gp);
     }
-    if(buttonPressed(gp.buttons[L2])){
-        camera.position.set(p.x, p.y, p.z+unit_speed)
-    }
-    if(buttonPressed(gp.buttons[R2])){
-        camera.position.set(p.x, p.y, p.z-unit_speed)
-    }
-    if(buttonPressed(gp.buttons[UP])){
-        camera.position.set(p.x, p.y+unit_speed, p.z)
-    }
-    if(buttonPressed(gp.buttons[DOWN])){
-        camera.position.set(p.x, p.y-unit_speed, p.z)
-    }
-    
     //console.log(camera.position.x+","+camera.position.y+","+camera.position.z)
     requestAnimationFrame(render);
     renderer.render(scene, camera);
