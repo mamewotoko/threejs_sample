@@ -102,7 +102,7 @@ var RIGHT = 15;
 //id: ca3-24
 var unit_speed = 2;
 
-var ps2 = {
+var ps3 = {
     PREFIX: '54c-268-',
     handle: function(gp){
         var backward = gp.buttons[6].pressed;
