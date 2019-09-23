@@ -232,9 +232,11 @@ function render() {
     // }
 
     if(gp.id.startsWith(ps3)){
+        console.log('handle ps3');
         ps3.handle(gp);
     }
     else if(gp.id.startsWith(sega)){
+        console.log('handle sega');
         sega.handle(gp);
     }
     //console.log(camera.position.x+","+camera.position.y+","+camera.position.z)
