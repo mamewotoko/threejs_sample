@@ -6,7 +6,7 @@ var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
 var renderer = new THREE.WebGLRenderer();
-renderer.setSize( window.innerWidth, window.innerHeight);
+renderer.setSize( window.innerWidth, window.innerHeight-20);
 document.body.appendChild(renderer.domElement);
 //var control = new THREE.OrbitControls(camera, renderer.domElement);
 
@@ -85,9 +85,24 @@ var DOWN = 13;
 var LEFT = 14;
 var RIGHT = 15;
 
+//sega
+//up: axis5 -1
+//down: axis5 1
+//left: axis4 -1
+//right: axis4 1
+//x: b3
+//y: b0
+//z: b4
+//a: b2
+//b: b1
+//c: b5
+//mode: b8
+//start: b9
+
 function render() {
     var gamepads = navigator.getGamepads ? navigator.getGamepads() : (navigator.webkitGetGamepads ? navigator.webkitGetGamepads : []);
     if (!gamepads) {
+        requestAnimationFrame(render);
         return;
     }
     // console.log("gamepads: "+gamepads)
@@ -96,8 +111,11 @@ function render() {
     //     console.log("gp: " + i + " "+gamepads[i]);
     // }
     var gp = gamepads[0];
-    // console.log("gamepads: "+gp)
-   
+    if(gp == null){
+        console.log("gamepads: press some button to start")
+        requestAnimationFrame(render);
+        return;
+    }
     var backward = gp.buttons[6].pressed;
     var forward = gp.buttons[7].pressed;
     var unit_speed = 2;
@@ -121,7 +139,7 @@ function render() {
         camera.position.set(p.x, p.y-unit_speed, p.z)
     }
     
-    console.log(camera.position.x+","+camera.position.y+","+camera.position.z)
+    //console.log(camera.position.x+","+camera.position.y+","+camera.position.z)
     requestAnimationFrame(render);
     renderer.render(scene, camera);
 }
