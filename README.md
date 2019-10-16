@@ -27,7 +27,7 @@ Contents
     * [Regular Icosahedron(20)](https://rawcdn.githack.com/mamewotoko/threejs_sample/f6dd2b76db7098ef19918a5cf04ba33aaffc06a5/graphics/20/regular_icosahedron.html)
     * [Truncated Icosahedron](https://rawcdn.githack.com/mamewotoko/threejs_sample/f6dd2b76db7098ef19918a5cf04ba33aaffc06a5/graphics/12/regular_dodecahedron.html)
 
-5. [cardboard sample (HMD)](https://rawcdn.githack.com/mamewotoko/threejs_sample/f6dd2b76db7098ef19918a5cf04ba33aaffc06a5/greentea_hmd.html)
+5. [cardboard sample (HMD, VR, StereoVR, DeviceOrientation)](https://rawcdn.githack.com/mamewotoko/threejs_sample/f6dd2b76db7098ef19918a5cf04ba33aaffc06a5/greentea_hmd.html)
   * Note: fullscreen
      * hide home touch button for browser to hide back/home/switch app button of android
      * select fullscreen config of browser to hide status bar
@@ -35,7 +35,7 @@ Contents
      * scroll down to bottom of page to hide url bar
 6. Gamepad API(https://rawcdn.githack.com/mamewotoko/threejs_sample/f6dd2b76db7098ef19918a5cf04ba33aaffc06a5/control/greentea.html)
   * PS3 controller, index 0
-  
+
 TODO
 ----
 * add mouse control
