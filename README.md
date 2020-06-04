@@ -9,7 +9,7 @@ browse html using web browser except IE
 
 Contents
 --------
-1. texture on cylinder [greentea.html](greentea.html) 
+1. texture on cylinder [greentea.html](greentea.html)
   * browse on [raw.githack.com](https://rawcdn.githack.com/mamewotoko/threejs_sample/f6dd2b76db7098ef19918a5cf04ba33aaffc06a5/greentea.html)
   * using MeshFaceMaterial for CylinderGeometry (which has many segments)
 
@@ -47,9 +47,10 @@ TODO
 Reference
 ----------
 * [three.js](https://threejs.org/)
-* [raw.githack.com](https://raw.githack.com/) 
+* [raw.githack.com](https://raw.githack.com/)
   * _raw.githack.com serves raw files directly from GitHub, Bitbucket or GitLab with proper Content-Type headers_
+* [An HTMl Test report](https://mamewo.ddo.jp/redmine/merged.html)
 
 ----
-Takashi Masuyama <mamewotoko@gmail.com>  
+Takashi Masuyama <mamewotoko@gmail.com>
 http://mamewo.ddo.jp/
