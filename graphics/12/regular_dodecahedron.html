@@ -6,11 +6,24 @@
    <script src="../../js/lib/three.min.js"></script>
    <script src="../../js/lib/OrbitControls.js"></script>
    <script src="../../js/lib/axis.js"></script>
-   
+   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
    <title>Regular Dodechedron</title>
 </head>
   <body>
     <canvas id="screen"></canvas>
 <script src="js/draw.js"></script>
 <img src="pentagon.svg" width="600" height="600">
+
+<br>
+\(\theta = {{2 \pi} \over 5} \)
+<br>
+\(a_1 = {\sin{\theta \over 2} \over \cos{\theta \over 2}} \)
+<br>
+\(b_3 = r{{\sin{4 \theta}\cos{\theta \over 2} - cos{4 \theta}sin{\theta \over 2}}\over \cos{\theta \over 2}} \)
+<br>
+\(x_2 = {-b_3 \over a_1 }
+=  - r {{\sin{4 \theta}\cos{\theta \over 2} - \cos{4 \theta} \sin{\theta \over 2}} \over \sin{\theta \over 2}} \)
+
 </body></html>
