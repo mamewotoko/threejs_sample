@@ -59,7 +59,7 @@ for(var i = 0; i < 6; i++){
     geometry = new THREE.Geometry();
     geometry.vertices.push(o, q[i]);
     var ll = new THREE.Line(geometry, material);
-    scene.add(ll);   
+    scene.add(ll);
 }
 
 for(var i = 0; i < 6; i++){
@@ -143,7 +143,7 @@ put_line(v2t, v0out);
 put_line(v2t, v2out);
 put_line(v2t, v1rot);
 
-camera.position.set(0, 40, 40);
+camera.position.set(0, 20, 40);
 render();
 
 function put_marker(v, color, name, parent){
