@@ -49,7 +49,7 @@ Reference
 * [three.js](https://threejs.org/)
 * [raw.githack.com](https://raw.githack.com/)
   * _raw.githack.com serves raw files directly from GitHub, Bitbucket or GitLab with proper Content-Type headers_
-* [An HTMl Test report](https://mamewo.ddo.jp/redmine/merged.html)
+* [An HTML Test report](https://mamewo.ddo.jp/redmine/merged.html)
 
 ----
 Takashi Masuyama <mamewotoko@gmail.com>
